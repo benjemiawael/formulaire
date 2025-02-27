@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استبيان الألعاب التعليمية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .enactus-logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .bg-enactus-yellow {
+            background-color: #F5A623;
+        }
+        .text-enactus-black {
+            color: #4A4A4A;
+        }
+        .btn-enactus {
+            background-color: #F5A623;
+            color: white;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-enactus:hover {
+            background-color: #D88C1C;
+            transform: scale(1.05);
+        }
+        .btn-enactus:active {
+            background-color: #D88C1C;
+            transform: scale(1);
+        }
+        .input-focus {
+            border-color: #F5A623;
+            box-shadow: 0 0 5px rgba(245, 166, 35, 0.5);
+        }
+        .input-focus:focus {
+            outline: none;
+            border-color: #F5A623;
+            box-shadow: 0 0 8px rgba(245, 166, 35, 0.8);
+        }
+        .header-bg {
+            background-color: #F5A623;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .header-text {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .section-title {
+            color: #F5A623;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .form-container {
+            background: linear-gradient(to right, #F5A623, #FFDD75);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="form-container">
+        <div class="text-center">
+            <img src="logo.png" alt="Enactus Logo" class="enactus-logo">
+        </div>
+        <div class="header-bg mb-6">
+            <h2 class="header-text">استبيان الألعاب التعليمية للأطفال</h2>
+        </div>
+        <form id="questionForm" class="space-y-4">
+            <div class="concept-text">
+                <p><strong>ايجا نكونوا يد وحدة و نعاونوا الصغار في رحلتهم ضد التوحد.</strong><br>
+                مشروع يتمثل في مجموعة العاب تعاونهم في التعلم و تمشي بيهم نحو الاستقلالية.<br><br>
+    
+                <strong>لعبة التعابير الوجهية:</strong> التي تتمثل في مجموعة تصاور تعبر على مختلف المشاعر (الفرح، الغضب، الحزن، ...) مع إيموجيز، وفي كل مرة الطفل لازم يحاول يفهمهم و يطابق بين الشعور لي في الصورة والشعور الي في الإيموجي. لعبة تعليمية تعاون على فهم المشاعر و التفريق بينها.<br><br>
+    
+                <strong>لعبة قواعد الحياة:</strong> تتمثل في أن الطفل يتعلم كيف يفرق بين الحاجات الي لازم يعملها و الي لازم ما يعملهاش. لعبة تسهل الاندماج في الحياة الاجتماعية و تعزيز استقلالية الطفل.<br><br>
+    
+                <strong>لعبة التركيب:</strong> تتمثل في أشكال مختلفة الحجم و اللون، حيث يحاول الطفل وضعها في المكان المناسب. لعبة تعزز التركيز و تعلم الأشكال والألوان.<br><br>
+    
+                <strong>مراة المشاعر:</strong> لعبة يتم فيها تطبيق المشاعر المرسومة على البطاقات أمام المراية، مما يساعد الطفل على فهم المشاعر و التفريق بينها.<br><br>
+    
+                <strong>لعبة البطاقات:</strong> لعبة تعليمية تتمثل في بطاقات مقسمة إلى مجموعات مثل (خضار، فواكه، حيوانات ...) حيث يختار المعلم مجموعة ويطلب من الطفل إعطائه بطاقة من المجموعة التي اختارها. تساعد اللعبة على تعلم التركيز وتحسين التعلم.<br></p>
+            </div>
+            <div class="line-border line-lightyellow p-4 rounded-lg">
+                <label for="fullName" class="block text-enactus-black">الاسم الكامل</label>
+                <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus" placeholder="أدخل اسمك الكامل">
+            </div>
+
+            <div class="line-border line-lightyellow p-4 rounded-lg">
+                <label for="email" class="block text-enactus-black">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus" placeholder="أدخل بريدك الإلكتروني">
+            </div>
+
+            <div class="line-border line-lightyellow p-4 rounded-lg">
+                <h3 class="section-title">اللعبة 1: تعابير الوجه</h3>
+                <label class="block text-enactus-black">عجبتك اللعبة؟ نعم أم لا</label>
+                <div class="flex items-center mb-4">
+                    <label class="mr-4">
+                        <input type="radio" name="game1" value="yes" class="game1-radio" required> نعم
+                    </label>
+                    <label>
+                        <input type="radio" name="game1" value="no" class="game1-radio"> لا
+                    </label>
+                </div>
+
+                <div id="game1-yes" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">إذا عجبتك، احكيلنا شنية حسيت تأثيرها على الصغير</label>
+                    <input type="text" id="q2" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <div id="game1-no" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">كان لا، شنية المشاكل الي تعرضلها الصغير</label>
+                    <input type="text" id="q3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <!-- Suggestions -->
+                <div class="mt-4">
+                    <label for="suggestions1" class="block text-enactus-black">شنية اقتراحاتك للتحسين؟</label>
+                    <input type="text" id="suggestions1" name="suggestions1" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+            </div>
+
+            <div class="line-border line-lightyellow p-4 rounded-lg">
+                <h3 class="section-title">اللعبة 2: قواعد الحياة</h3>
+                <label class="block text-enactus-black">عجبتك اللعبة؟ نعم أم لا</label>
+                <div class="flex items-center mb-4">
+                    <label class="mr-4">
+                        <input type="radio" name="game2" value="yes" class="game2-radio" required> نعم
+                    </label>
+                    <label>
+                        <input type="radio" name="game2" value="no" class="game2-radio"> لا
+                    </label>
+                </div>
+
+                <div id="game2-yes" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">إذا عجبتك، احكيلنا شنية حسيت تأثيرها على الصغير</label>
+                    <input type="text" id="q6" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <div id="game2-no" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">كان لا، شنية المشاكل الي تعرضلها الصغير</label>
+                    <input type="text" id="q7" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <!-- Suggestions -->
+                <div class="mt-4">
+                    <label for="suggestions2" class="block text-enactus-black">شنية اقتراحاتك للتحسين؟</label>
+                    <input type="text" id="suggestions2" name="suggestions2" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+            </div>
+
+            <div class="line-border line-lightyellow p-4 rounded-lg">
+                <h3 class="section-title">اللعبة 3: التركيب</h3>
+                <label class="block text-enactus-black">عجبتك اللعبة؟ نعم أم لا</label>
+                <div class="flex items-center mb-4">
+                    <label class="mr-4">
+                        <input type="radio" name="game3" value="yes" class="game3-radio" required> نعم
+                    </label>
+                    <label>
+                        <input type="radio" name="game3" value="no" class="game3-radio"> لا
+                    </label>
+                </div>
+
+                <div id="game3-yes" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">إذا عجبتك، احكيلنا شنية حسيت تأثيرها على الصغير</label>
+                    <input type="text" id="q10" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <div id="game3-no" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">كان لا، شنية المشاكل الي تعرضلها الصغير</label>
+                    <input type="text" id="q11" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <!-- Suggestions -->
+                <div class="mt-4">
+                    <label for="suggestions3" class="block text-enactus-black">شنية اقتراحاتك للتحسين؟</label>
+                    <input type="text" id="suggestions3" name="suggestions3" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+            </div>
+
+            <div class="line-border line-lightyellow p-4 rounded-lg">
+                <h3 class="section-title">اللعبة 4: مراة المشاعر</h3>
+                <label class="block text-enactus-black">عجبتك اللعبة؟ نعم أم لا</label>
+                <div class="flex items-center mb-4">
+                    <label class="mr-4">
+                        <input type="radio" name="game4" value="yes" class="game4-radio" required> نعم
+                    </label>
+                    <label>
+                        <input type="radio" name="game4" value="no" class="game4-radio"> لا
+                    </label>
+                </div>
+
+                <div id="game4-yes" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">إذا عجبتك، احكيلنا شنية حسيت تأثيرها على الصغير</label>
+                    <input type="text" id="q14" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <div id="game4-no" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">كان لا، شنية المشاكل الي تعرضلها الصغير</label>
+                    <input type="text" id="q15" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <!-- Suggestions -->
+                <div class="mt-4">
+                    <label for="suggestions4" class="block text-enactus-black">شنية اقتراحاتك للتحسين؟</label>
+                    <input type="text" id="suggestions4" name="suggestions4" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+            </div>
+
+            <div class="line-border line-lightyellow p-4 rounded-lg">
+                <h3 class="section-title">اللعبة 5: البطاقات التعليمية</h3>
+                <label class="block text-enactus-black">عجبتك اللعبة؟ نعم أم لا</label>
+                <div class="flex items-center mb-4">
+                    <label class="mr-4">
+                        <input type="radio" name="game5" value="yes" class="game5-radio" required> نعم
+                    </label>
+                    <label>
+                        <input type="radio" name="game5" value="no" class="game5-radio"> لا
+                    </label>
+                </div>
+
+                <div id="game5-yes" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">إذا عجبتك، احكيلنا شنية حسيت تأثيرها على الصغير</label>
+                    <input type="text" id="q18" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <div id="game5-no" class="game-response hidden">
+                    <label class="block text-enactus-black mt-4">كان لا، شنية المشاكل الي تعرضلها الصغير</label>
+                    <input type="text" id="q19" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+
+                <!-- Suggestions -->
+                <div class="mt-4">
+                    <label for="suggestions5" class="block text-enactus-black">شنية اقتراحاتك للتحسين؟</label>
+                    <input type="text" id="suggestions5" name="suggestions5" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 input-focus">
+                </div>
+            </div>
+
+            <!-- Bouton de soumission -->
+            <div>
+                <button type="submit" class="btn-enactus">إرسال الاستبيان</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function handleGameResponse(gameNumber) {
+                const yesRadio = document.querySelector(`input[name="game${gameNumber}"][value="yes"]`);
+                const noRadio = document.querySelector(`input[name="game${gameNumber}"][value="no"]`);
+                const yesResponse = document.getElementById(`game${gameNumber}-yes`);
+                const noResponse = document.getElementById(`game${gameNumber}-no`);
+    
+                if (yesRadio && noRadio) {
+                    yesRadio.addEventListener('change', function () {
+                        yesResponse.classList.remove('hidden');
+                        noResponse.classList.add('hidden');
+                    });
+    
+                    noRadio.addEventListener('change', function () {
+                        noResponse.classList.remove('hidden');
+                        yesResponse.classList.add('hidden');
+                    });
+                }
+            }
+    
+            for (let i = 1; i <= 5; i++) {
+                handleGameResponse(i);
+            }
+    
+            document.getElementById('questionForm').addEventListener('submit', async function (event) {
+                event.preventDefault();
+    
+                const formData = new FormData(event.target);
+                const formObject = {};
+    
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+    
+                console.log("Données envoyées :", formObject); // Vérifie ce qui est envoyé
+    
+                try {
+                    const response = await fetch('https://ton-backend.herokuapp.com/submit', { // Remplace par l'URL de ton serveur si nécessaire
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formObject),
+                    });
+    
+                    if (response.ok) {
+                        alert('Données envoyées avec succès');
+                    } else {
+                        alert('Erreur lors de l\'envoi des données');
+                    }
+                } catch (err) {
+                    alert('Erreur réseau');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
